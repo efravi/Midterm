@@ -165,15 +165,24 @@ void loop() {
   display.display();
   display.clearDisplay();
 
+    // wemoWrite(0, HIGH);
+    // wemoWrite(1, HIGH);
     wemoWrite(2, HIGH);
+    // wemoWrite(3, HIGH);
+    // wemoWrite(4, HIGH);
+    // setHue(1, 255, HueBlue, 255 , 255);
+    // setHue(2, 255, HueBlue, 255 , 255);
     setHue(3, 255, HueBlue, 255 , 255);
+    // setHue(4, 255, HueBlue, 255 , 255);
+    // setHue(5, 255, HueBlue, 255 , 255);
+
 }
 else {
   Serial.printf("At least one light is green, class is on\n");
   display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,0);
-  display.printf("CLASS IS ON\nTemp: %.0f\nPressure: %.0f\nHumidity: %.0f", tempF, pressHg, humidRH);
+  display.printf("CLASS IS ON\nINSTRUCTOR IN PLAY\n\nTemp: %.0f\n", tempF, pressHg, humidRH);
   //display.printf("Temp: %f\nPressure: %f\nHumidity %f", tempf, pressure,)
   display.display();
   display.clearDisplay();
